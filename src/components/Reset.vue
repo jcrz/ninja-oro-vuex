@@ -10,7 +10,7 @@ import { mapMutations } from "vuex";
 export default {
   name: "Reset",
   methods: {
-    ...mapMutations(["resetear"])
+    ...mapMutations('activities', ["resetear"])
   }
 };
 </script>

@@ -18,7 +18,7 @@ export default {
     titulo: String,
   },
   methods: {
-    ...mapMutations(["actualizarOros"])
+    ...mapMutations('activities', ["actualizarOros"])
   }
 };
 </script>

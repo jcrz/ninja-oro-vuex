@@ -4,8 +4,8 @@
       <b-col class="tuOro">
         <h2>
           <img v-bind:src="require('../assets/images/chest.svg')" alt="baúl" width="60" />
-          <span v-if=" contador < 0 " class="contador" :style="{ color: colorRojo }" >{{ contador }}</span>
-          <span v-else class="contador" :style="{ color: colorNegro }" >{{ contador }}</span>
+          <span v-if=" cantidadOros < 0 " class="contador" :style="{ color: colorRojo }" >{{ cantidadOros }}</span>
+          <span v-else class="contador" :style="{ color: colorNegro }" >{{ cantidadOros }}</span>
         </h2>
       </b-col>
     </b-row>
@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: "ContadorOro",
   computed: {
-    ...mapGetters(["contador", "actividades"])
+    ...mapState('activities', ["cantidadOros"])
   },
   data() {
     return {
